@@ -30,9 +30,7 @@ int main(int argc, char **argv)
         float conv;
 
         while (ch != '\0') {
-            // FIXME: Handle negative numbers
-            //printf("%c\n", ch); 
-            if (isdigit(ch) || ch == '.') {
+            if (isdigit(ch) || ch == '.' || (ch == '-' && j == 0)) {
                 temp[j] = ch;
                 j++;
             /*} else if (ch == '.') {
