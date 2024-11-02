@@ -79,8 +79,8 @@ jobs:
     - if: matrix.build-mode == 'manual'
       shell: bash
       run: |
-        echo 'Installing gcc...'
-        sudo apt-get gcc
+        echo 'installing gcc...'
+        sudo apt-get intall -y gcc
         echo 'building thermometer...'
         gcc temp.c -o therm
         exit 0
