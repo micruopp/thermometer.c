@@ -80,7 +80,7 @@ jobs:
       shell: bash
       run: |
         echo 'installing gcc...'
-        sudo apt-get intall -y gcc
+        sudo apt-get install -y gcc
         echo 'building thermometer...'
         gcc temp.c -o therm
         exit 0
