@@ -79,12 +79,11 @@ jobs:
     - if: matrix.build-mode == 'manual'
       shell: bash
       run: |
-        echo 'If you are using a "manual" build mode for one or more of the' \
-          'languages you are analyzing, replace this with the commands to build' \
-          'your code, for example:'
-        echo '  make thermometer'
+        echo 'Installing gcc...'
+        sudo apt-get gcc
+        echo 'building thermometer...'
         gcc temp.c -o therm
-        exit 1
+        exit 0
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
